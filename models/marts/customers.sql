@@ -38,7 +38,7 @@ final as (
         cities.city_name,
         states.state_name,
         zip_codes.zip_code,
-        employees.full_name as main_employee,
+        nvl(employees.full_name, 'None') as main_employee,
         customers.created_at,
         customers.updated_at,
         customers.is_active
