@@ -73,7 +73,7 @@ jaffle_shop
 
 ## Testing
 
-- Every subdirectory should contain a `.yml` file, in which each model in the subdirectory is tested. For staging folders, the naming structure should be `src_sourcename.yml`. For other folders, the structure should be `foldername.yml` (example `core.yml`).
+- Every subdirectory should contain a `.yml` file, in which each model in the subdirectory is tested. For staging folders, there will be both `_sourcename__sources.yml` as well as `_sourcename__models.yml`. For other folders, the structure should be `_foldername__models.yml` (example `_finance__models.yml`).
 - At a minimum, unique and not_null tests should be applied to the primary key of each model.
 
 ## Naming and field conventions
