@@ -2,4 +2,23 @@ version: 2
 
 models:
   - name: customers
+    description: >
+      This table contains customer-level data along with aggregated sales 
+      numbers.
+    columns:
+      - name: customer_id
+        description: The unique identifier for a single customer.
+      - name: created_at_est
+        tests:
+          - est_timezone_offset
+      - name: updated_at_est
+        tests:
+          - est_timezone_offset
   - name: orders
+    description: '{{ doc("orders_table_description") }}'
+    columns:
+      - name: order_id
+        description: The unique identifier for a single order. 
+      - name: created_at_est
+        tests:
+          - est_timezone_offset
