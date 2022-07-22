@@ -20,7 +20,7 @@ products as (
 
 customers as (
 
-    select * from {{ ref('customers') }}
+    select * from {{ ref('stg_tech_store__customers') }}
 
 ),
 
@@ -31,8 +31,7 @@ final as (
         orders.order_id,
         transactions.transaction_id,
         customers.customer_id,
-        customers.customer_name,        
-        customers.main_employee,
+        customers.customer_name,
         products.product_name,
         products.category,
         products.price,
