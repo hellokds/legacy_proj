@@ -2,4 +2,15 @@ version: 2
 
 models:
   - name: customers
+    columns:
+      - name: created_at_est
+        tests:
+          - est_timezone_offset
+      - name: updated_at_est
+        tests:
+          - est_timezone_offset
   - name: orders
+    columns:
+      - name: created_at_est
+        tests:
+          - est_timezone_offset
