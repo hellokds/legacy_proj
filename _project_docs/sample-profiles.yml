@@ -21,3 +21,13 @@ dbt_training:
       type: snowflake
       user: automation_user
       warehouse: AUTOMATION_WH
+    prod:
+      account: [snowflake-account]
+      database: ANALYTICS
+      password: [password]
+      role: AUTOMATION
+      schema: public # Will deploy to custom schemas (staging/marts)
+      threads: 5
+      type: snowflake
+      user: automation_user
+      warehouse: AUTOMATION_WH
