@@ -2,11 +2,10 @@ name: Deploy to Prod
 
 on:
   schedule:
-    - cron: '18 * * * *' # Runs every hour at 18th minute
+    - cron: '21 * * * *' # Runs every hour at 18th minute
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
       DBT_USER: ${{ secrets.DBT_USER }}
