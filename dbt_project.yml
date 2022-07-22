@@ -16,6 +16,9 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+vars:
+  default_date: '9999-01-01'
+
 models:
   dbt_training:
     staging:
