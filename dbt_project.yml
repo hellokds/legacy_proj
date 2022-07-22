@@ -20,5 +20,7 @@ models:
   dbt_training:
     staging:
       +materialized: view
+      +schema: staging
     marts:
       +materialized: table
+      +schema: marts
