@@ -34,6 +34,9 @@ jobs:
       - name: Deploy & Test Models (PROD)
         run: dbt build --profiles-dir . --target prod
 
+      - name: Generate Documentation
+        run: dbt docs generate --profiles-dir . --target prod
+
       - name: Deploy Documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
