@@ -1,9 +1,10 @@
 name: Scheduled Prod Runs
 
 on:
-  schedule:
-    - cron: '21 * * * *' # Runs every hour at 21st minute
-
+#  schedule:
+#    - cron: '21 * * * *' # Runs every hour at 21st minute
+  workflow_dispatch:
+  
 permissions:
   contents: write
 
@@ -29,7 +30,10 @@ jobs:
 
       - name: Deploy & Test Models (PROD)
         run: dbt build --profiles-dir . --target prod
-
+        
+      - name: Generate Documentation
+        run: dbt docs generate --profiles-dir . --target prod
+        
       - name: Deploy Documentation
         uses: JamesIves/github-pages-deploy-action@v4
         with:
