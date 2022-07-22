@@ -1,0 +1,23 @@
+dbt_training:
+  target: dev
+  outputs:
+    dev:
+      account: [snowflake-account]
+      database: ANALYTICS_DEV
+      password: [password]
+      role: DEVELOPER
+      schema: [dbt_schema]
+      threads: 5
+      type: snowflake
+      user: [username]
+      warehouse: DEVELOPER_WH
+    qa:
+      account: [snowflake-account]
+      database: ANALYTICS_DEV
+      password: [password]
+      role: AUTOMATION
+      schema: qa # Shared pre-production environment
+      threads: 5
+      type: snowflake
+      user: automation_user
+      warehouse: AUTOMATION_WH
