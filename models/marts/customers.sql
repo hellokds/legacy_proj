@@ -41,7 +41,9 @@ final as (
         nvl(employees.full_name, 'None') as main_employee,
         employees.is_active as main_employee_is_active,
         customers.created_at,
+        customers.created_at_est,
         customers.updated_at,
+        customers.updated_at_est,
         customers.is_active
 
     from customers
