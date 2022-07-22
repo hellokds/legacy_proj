@@ -1,4 +1,4 @@
-name: Deploy to Prod
+name: Scheduled Prod Runs
 
 on:
   schedule:
