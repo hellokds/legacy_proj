@@ -39,6 +39,7 @@ final as (
         states.state_name,
         zip_codes.zip_code,
         nvl(employees.full_name, 'None') as main_employee,
+        employees.is_active as main_employee_is_active,
         customers.created_at,
         customers.updated_at,
         customers.is_active
@@ -56,7 +57,6 @@ final as (
     
     left join employees
         on customers.main_employee_id = employees.employee_id
-        and employees.is_active = true
 
 )
 

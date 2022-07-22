@@ -14,7 +14,7 @@ final as (
         quantity,
         userid as employee_id,
         customerid as customer_id,
-        date as created_at
+        datetime as created_at
 
     from orders
 

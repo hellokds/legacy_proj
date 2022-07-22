@@ -13,8 +13,8 @@ final as (
         name as customer_name,
         cityid as city_id,
         mainsalesrepid as main_employee_id,
-        createdate as created_at,
-        updatedate as updated_at,
+        createdatetime as created_at,
+        updatedatetime as updated_at,
         iff(active = 'yes', true, false) as is_active
 
     from customers
