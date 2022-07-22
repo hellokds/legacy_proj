@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     env:
       DBT_USER: ${{ secrets.DBT_USER }}
@@ -25,5 +25,5 @@ jobs:
       - name: Install dbt
         run: pip install dbt-snowflake
 
-      - name: Deploy & Test (QA)
+      - name: Deploy & Test Models (QA)
         run: dbt build --profiles-dir . --target qa

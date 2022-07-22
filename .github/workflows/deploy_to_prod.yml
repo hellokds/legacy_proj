@@ -7,8 +7,12 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
