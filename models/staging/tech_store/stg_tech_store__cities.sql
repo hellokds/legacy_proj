@@ -12,7 +12,7 @@ final as (
         id as city_id,
         name as city_name,
         stateid as state_id,
-        zipid as zip_id
+        zipid as zip_code_id
 
     from cities
 
